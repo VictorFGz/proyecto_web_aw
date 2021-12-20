@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VV fernandez</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+  <div class="header">
+    <h3 class="titulo">VV Fernández</h3>
+    <p class="subtitulo">Clínica veterinaria</p>
+  </div>
+
+  <img src="perro.png" class="perro">
+
+  <div id="navbar">
+    <a class="inicio" href="index.html">Quiénes somos</a>
+    <a class="animales" href="servicios.html">Servicios</a>
+    <a class="contacto" href="formulario.html">Contacto</a>
+  </div>
+  
+  <div class="publi1"></div>
+  <div class="contenido">
+    <p class="texto1">VV Fernández es una clinica veterinaria especializada sobre todo en gatos y perros. Aqui daremos los mejores trataminetos y facilidades para que tus macota este lo mas sana posible.</p>
+    <p class="texto2">En nuestra clinica encontraras todo lo que podemos ofrecer para que tu mascota esta muy sana y lo mas feliz psoible</p>
+    <p class="texto3">Desde esta misma pagina web podras contactar con nosotros mediante un formulario clickeando el apartado de contacto. </p>
+    <p class="texto3">Equipamiento moderno, profesionalidad y compromiso personal: todo ello define a la perfección nuestra consulta veterinaria. Lo más importante para nosotros es el bienestar de los animales. Para conseguir un diagnóstico óptimo y un tratamiento efectivo de los animales, conversamos detenidamente con el dueño y nos tomamos el tiempo necesario para investigar a fondo. Visítenos: estaremos encantados de recibirle en nuestra consulta veterinaria.</p>
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img class="img" src="https://www.clinicaveterinariaalbacora.com/wp-content/uploads/2020/01/Panorama_Albacora_recibidor_01_B.jpg" style="width:100%">
+        <div class="text">Entrada</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img class="img" src="https://www.clinicaveterinariaalbacora.com/wp-content/uploads/2015/01/WhatsApp-Image-2020-01-28-at-17.02.05-9.jpeg" style="width:100%">
+        <div class="text">Sala Rayos X</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img class="img" src="https://www.clinicaveterinariaalbacora.com/wp-content/uploads/2020/01/Equipo-Completo-01-1-400x266.jpeg" style="width:100%">
+        <div class="text">Nuestro equipo.</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span>
+
+  </div>  
+  
+  
+  
+  <script>
+  window.onscroll = function() {myFunction()};
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+    
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+    
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+    
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+  
+</body>
+</html>
